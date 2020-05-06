@@ -1,0 +1,15 @@
+version: '3'
+
+services: 
+
+  nginx:
+    image: nginx
+    ports: 
+      - 8080:80
+    volumes:
+      - ./nginx:/usr/share/nginx/html/
+  
+  redis:
+    image: redis:alpine
+    expose: 
+      - 6379
